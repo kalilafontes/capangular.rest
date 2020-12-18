@@ -1,0 +1,57 @@
+<div class="form-search" style="width: 650px; margin: 0 auto; margin-top: 80px;">
+  <form  #form = "ngForm" (change) = "onSubmit(form)" novalidate ngForm>
+    <label for="nome">Selecione a Marca do Veículo Desejado</label><br>
+  
+    <select class="browser-default" #carroSelecionado = "ngModel" ngModel name="codigo">
+      <option required *ngFor="let carro of carroList" [value]="carro.codigo" > {{carro.nome}}</option>
+    </select> <br>
+  
+    <span style="color:red;" *ngIf=error>{{errorMessage}}</span><br> 
+    
+    <div class="dados" *ngIf="carroSelecionado">  
+      <table border="1">
+        <tr>
+          <td>
+            Marca
+          </td>
+          <td>
+            Modelo
+          </td>
+          <td>
+            Combustivel
+          </td>
+          <td>
+            Ano/Modelo
+          </td>
+          <td>
+            Valor
+          </td>            
+        </tr>  
+        <tr *ngFor="let valor of valoresCompleto">
+          <td>
+            {{valor.Marca}}
+          </td>
+          <td>
+            {{valor.Modelo}}
+          </td>
+          <td>
+            {{valor.Combustivel}}
+          </td>
+          <td>
+            {{valor.AnoModelo}}
+          </td>
+          <td>
+            {{valor.Valor | currency }}
+          </td>
+          
+          
+        </tr>  
+    
+      </table>
+
+    </div>
+    
+  </form>
+  
+  
+</div>

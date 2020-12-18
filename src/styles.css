@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: rgb(255, 222, 77);
+  background-image: url(./assets/bg-cars-repeat.jpg);
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+.form-search {
+  background-color: #1f1d15cc;
+  padding: 30px;
+}
+
+label,
+.dados {
+  color: #ffffff !important;
+  font-weight: 700;
+}
