@@ -3,7 +3,7 @@ body {
   background-color: rgb(255, 222, 77);
   background-image: url(./assets/bg-cars-repeat.jpg);
   background-size: cover;
-  background-repeat: repeat-x;
+  background-repeat: repeat-y;
 }
 
 .form-search {

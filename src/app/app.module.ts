@@ -9,14 +9,16 @@ import { FormsModule } from '@angular/forms';
 import { CarrosService } from './services/carros/carros.service';
 import { CarrosComponent } from './components/carros/carros/carros.component';
 import { DadosCarroComponent } from './components/dadosCarro/dados-carro/dados-carro.component';
-import { ValorPipe } from './shared/pipes/valor/valor.pipe';
+import { DateReferenciaPipe } from './shared/pipes/dateReferencia/date-referencia.pipe';
+import { SepararPalavrasPipe } from './shared/pipes/separarPalavras/separar-palavras.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarrosComponent,
     DadosCarroComponent,
-    ValorPipe
+    DateReferenciaPipe,
+    SepararPalavrasPipe
   ],
   imports: [
     BrowserModule,

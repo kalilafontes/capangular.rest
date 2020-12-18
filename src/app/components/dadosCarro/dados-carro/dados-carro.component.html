@@ -1,4 +1,4 @@
-<div class="form-search" style="width: 650px; margin: 0 auto; margin-top: 80px;">
+<div class="form-search" style="width: 850px; margin: 0 auto; margin-top: 80px;">
   <form  #form = "ngForm" (change) = "onSubmit(form)" novalidate ngForm>
     <label for="nome">Selecione a Marca do Veículo Desejado</label><br>
   
@@ -24,6 +24,9 @@
             Ano/Modelo
           </td>
           <td>
+            Mês de Referencia
+          </td>
+          <td>
             Valor
           </td>            
         </tr>  
@@ -32,7 +35,7 @@
             {{valor.Marca}}
           </td>
           <td>
-            {{valor.Modelo}}
+            {{valor.Modelo | separarPalavras}}
           </td>
           <td>
             {{valor.Combustivel}}
@@ -41,7 +44,10 @@
             {{valor.AnoModelo}}
           </td>
           <td>
-            {{valor.Valor }}
+            {{valor.MesReferencia | dateReferencia}}
+          </td>
+          <td>
+            {{valor.Valor}}
           </td>
           
           
